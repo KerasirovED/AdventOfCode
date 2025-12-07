@@ -1,4 +1,4 @@
-I created the repo to try to solve Advent of Code. 
+I created the repo to try to solve [Advent of Code](https://adventofcode.com/2025). 
 As a database developer, I plan to solve it using MS SQL only.
 Will see how it goes! 🎄🎁🧑‍💻
 
