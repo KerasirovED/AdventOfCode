@@ -1,0 +1,3 @@
+IF DB_ID('AdventOfCode2025') IS NULL
+	CREATE DATABASE AdventOfCode2025
+GO
