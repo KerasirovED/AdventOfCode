@@ -1,2 +1,2 @@
-[Open the task](https://adventofcode.com/?/day/?) \
+[Open the task](https://adventofcode.com/2025/day/?) \
 [Go to main](https://github.com/KerasirovED/AdventOfCode)
