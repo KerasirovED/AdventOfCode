@@ -6,9 +6,9 @@
 			CROSS APPLY (SELECT CHARINDEX('-', [range])) dashPos (dashPos)
 	),
 	rangeValues AS (
-		SELECT *
+		SELECT [value]
 		FROM (
-			SELECT ROW_NUMBER() OVER (PARTITION BY id ORDER BY (SELECT 1)) - 1 + r.[left] [value]
+			SELECT ROW_NUMBER() OVER (PARTITION BY id ORDER BY (SELECT 1)) - 1 + r.[left] [value], [right]
 			FROM ranges r, (SELECT TOP 235364 1 FROM sys.objects a, sys.objects b, sys.objects c) x (x)
 		) x
 		WHERE [value] <= [right]
