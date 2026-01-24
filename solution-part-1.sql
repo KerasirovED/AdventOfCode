@@ -30,6 +30,6 @@ WITH
 		WHERE b.position > f.position
 		GROUP BY b.id
 	)
-SELECT SUM(f.digit * 10 + s.digit)
+SELECT SUM(f.digit * 10 + s.digit) joltage
 FROM firstDigit f
 	JOIN secondDigit s ON s.id = f.id

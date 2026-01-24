@@ -50,5 +50,5 @@ FROM batteries
 	) x
 	WHERE r = 1
 )
-SELECT SUM(digit)
+SELECT SUM(digit) joltage
 FROM digits
