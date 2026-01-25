@@ -3,6 +3,7 @@
     1. Change database schema from dayX to dayY
     2. Adjust the structure of the input tables, and user-defined types
     3. Update the test input
+    4. Adjust the link
 */
 
 IF DB_ID('AdventOfCode2025') IS NULL
