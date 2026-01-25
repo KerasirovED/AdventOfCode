@@ -1,8 +1,16 @@
 
-DECLARE @Input dayX.Input;
+USE AdventOfCode2025
 
-INSERT @Input
+DECLARE @Ranges day5.Ranges;
+
+INSERT @Ranges
 SELECT *
-FROM dayX.input
+FROM day5.Ranges
 
-EXEC Part1 @Input
+DECLARE @Values day5.[Values];
+
+INSERT @Values
+SELECT *
+FROM day5.[Values]
+
+EXEC day5.Part1 @Ranges, @Values

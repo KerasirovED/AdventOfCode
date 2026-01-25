@@ -1,18 +1,24 @@
 
 USE AdventOfCode2025
 
-DECLARE @Expected int = NULL;
+DECLARE @Expected int = 3;
 
-DECLARE @Input dayX.Input;
+DECLARE @Ranges day5.Ranges;
 
-INSERT @Input
+INSERT @Ranges
 SELECT *
-FROM dayX.test_input
+FROM day5.test_ranges
+
+DECLARE @Values day5.[Values];
+
+INSERT @Values
+SELECT *
+FROM day5.test_values
 
 DECLARE @Result TABLE (Result int)
 
 INSERT @Result
-EXEC dayX.Part1 @Input;
+EXEC day5.Part1 @Ranges, @Values;
 
 SELECT
     @Expected AS Expected,
