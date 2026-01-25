@@ -6,7 +6,7 @@ IF NOT EXISTS (SELECT * FROM sys.types WHERE is_table_type = 1 AND name = 'Rolls
 	);
 GO
 
-CREATE OR ALTER PROC day4.Solution
+CREATE OR ALTER PROC day4.SolutionPart1
 	@RollsRows day4.RollsRows READONLY
 AS
 BEGIN
