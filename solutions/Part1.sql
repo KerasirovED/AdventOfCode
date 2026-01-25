@@ -1,0 +1,8 @@
+
+USE AdventOfCode2025
+
+CREATE OR ALTER PROC dayX.Part1
+    @RollsRows dayX.Input READONLY
+AS
+    SELECT NULL
+GO
