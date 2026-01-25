@@ -22,10 +22,12 @@ BEGIN
 	FROM (
 		SELECT checkedValue.[row], checkedValue.[column]
 		FROM #Rolls checkedValue
+			-- here we select all eight rolls, this condition is better for index seeks
+			-- be aware that the checked roll is included in the nearby rolls
 			JOIN #Rolls nearbyRolls ON
 				nearbyRolls.[row] BETWEEN checkedValue.[row] - 1 AND checkedValue.[row] + 1
-				AND nearbyRolls.[column] BETWEEN checkedValue.[column] - 1 AND checkedValue.[column] + 1
-			GROUP BY checkedValue.[row], checkedValue.[column]
-			HAVING COUNT(*) < 5
+				AND nearbyRolls.[column] BETWEEN checkedValue.[column] - 1 AND  checkedValue.[column] + 1
+		GROUP BY checkedValue.[row], checkedValue.[column]
+		HAVING COUNT(*) < 5 -- because the checked roll is included, the condition got changed from < 4 to < 5
 	) x
 END;
